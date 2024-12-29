@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    #toggle-container {
+      display: none;
+      text-align: center;
+    }
+    .toggle-button {
+      font-size: 24px;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #2196F3;
+    }
+    .toggle-button.disabled {
+      background-color: #f44336;
+    }
+    #login-container {
+      display: block;
+    }
+    .status-text {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .toggle-button svg {
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+    }
+    .toggle-button svg {
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-container">
+    <h2>ToxMas SafeBrowsing Login</h2>
+    <div class="input-group">
+      <label for="email">Parent's Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </div>
+    <button id="login">Login</button>
+  </div>
+  
+  <div id="toggle-container">
+    <h2>Extension Control</h2>
+    <button id="toggle" class="toggle-button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+      </svg>
+    </button>
+    <div class="status-text">Extension is Active</div>
+    <button id="logout">Logout</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
